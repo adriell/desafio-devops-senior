@@ -1,19 +1,24 @@
 import os
+import pymysql
+
 
 from flask import Flask
 from flask import redirect
 from flask import render_template
 from flask import request
+from DAO.create_table import create_table
+import sqlalchemy as db
 
 from flask_sqlalchemy import SQLAlchemy
 
-project_dir = os.path.dirname(os.path.abspath(__file__))
-database_file = "sqlite:///{}".format(os.path.join(project_dir, "bookdatabase.db"))
+database_conn = "mysql+pymysql://root:book123@mysql_book/book"
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = database_file
+app.config["SQLALCHEMY_DATABASE_URI"] = database_conn
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
+db.create_all()
 
 class Book(db.Model):
     title = db.Column(db.String(80), unique=True, nullable=False, primary_key=True)
