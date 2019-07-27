@@ -5,7 +5,7 @@ import requests
 
 def main():
     response = requests.post('http://localhost:8001/services/', data={
-        "name": "book",
+        "name": "book_manager",
         "url": "http://book_manager:5000"
     })
     pprint(response.json())
