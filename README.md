@@ -1,10 +1,10 @@
 # Bem vindo ao desafio DevOps da Engineering do Brasil.
 Esse é o projeto desenvolvido para Engineering do Brasil. Esse desafio utilizei os seguintes serviços:
-1. - Kong API
-2. - Konga Dashboard (Interface gráfica do kong)
-3. - Banco PostgreSQL para o kong.
-4. - Serviço book_manager
-5. - Banco MySQL para o book_manager
+- Kong API
+- Konga Dashboard (Interface gráfica do kong)
+- Banco PostgreSQL para o kong.
+- Serviço book_manager
+- Banco MySQL para o book_manager
 
 ### **Pré-requisitos e instalação**
 
